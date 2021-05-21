@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "topratedicon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "topratedicon.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

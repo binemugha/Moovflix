@@ -7,8 +7,8 @@ target 'Moovflix' do
 
   # Pods for Moovflix
   pod 'SwiftyJSON'
-  pod 'Alamofire'
-  pod 'AlamofireImage'
+  pod 'Alamofire', '~> 4.7.0'
+  pod 'AlamofireImage', '~> 3.3.1'
   pod 'MBProgressHUD'
 
 end

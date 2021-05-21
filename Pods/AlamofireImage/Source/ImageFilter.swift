@@ -1,7 +1,7 @@
 //
 //  ImageFilter.swift
 //
-//  Copyright (c) 2015 Alamofire Software Foundation (http://alamofire.org/)
+//  Copyright (c) 2015-2018 Alamofire Software Foundation (http://alamofire.org/)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -43,7 +43,7 @@ public protocol ImageFilter {
 
 extension ImageFilter {
     /// The unique identifier for any `ImageFilter` type.
-    public var identifier: String { "\(type(of: self))" }
+    public var identifier: String { return "\(type(of: self))" }
 }
 
 // MARK: - Sizable
@@ -110,16 +110,16 @@ public protocol CompositeImageFilter: ImageFilter {
     var filters: [ImageFilter] { get }
 }
 
-extension CompositeImageFilter {
+public extension CompositeImageFilter {
     /// The unique idenitifier for any `CompositeImageFilter` type.
-    public var identifier: String {
-        filters.map { $0.identifier }.joined(separator: "_")
+    var identifier: String {
+        return filters.map { $0.identifier }.joined(separator: "_")
     }
 
     /// The filter closure for any `CompositeImageFilter` type.
-    public var filter: (Image) -> Image {
-        { image in
-            self.filters.reduce(image) { $1.filter($0) }
+    var filter: (Image) -> Image {
+        return { image in
+            return self.filters.reduce(image) { $1.filter($0) }
         }
     }
 }
@@ -170,8 +170,8 @@ public struct ScaledToSizeFilter: ImageFilter, Sizable {
 
     /// The filter closure used to create the modified representation of the given image.
     public var filter: (Image) -> Image {
-        { image in
-            image.af.imageScaled(to: self.size)
+        return { image in
+            return image.af_imageScaled(to: self.size)
         }
     }
 }
@@ -194,8 +194,8 @@ public struct AspectScaledToFitSizeFilter: ImageFilter, Sizable {
 
     /// The filter closure used to create the modified representation of the given image.
     public var filter: (Image) -> Image {
-        { image in
-            image.af.imageAspectScaled(toFit: self.size)
+        return { image in
+            return image.af_imageAspectScaled(toFit: self.size)
         }
     }
 }
@@ -219,8 +219,8 @@ public struct AspectScaledToFillSizeFilter: ImageFilter, Sizable {
 
     /// The filter closure used to create the modified representation of the given image.
     public var filter: (Image) -> Image {
-        { image in
-            image.af.imageAspectScaled(toFill: self.size)
+        return { image in
+            return image.af_imageAspectScaled(toFill: self.size)
         }
     }
 }
@@ -252,9 +252,11 @@ public struct RoundedCornersFilter: ImageFilter, Roundable {
 
     /// The filter closure used to create the modified representation of the given image.
     public var filter: (Image) -> Image {
-        { image in
-            image.af.imageRounded(withCornerRadius: self.radius,
-                                  divideRadiusByImageScale: self.divideRadiusByImageScale)
+        return { image in
+            return image.af_imageRounded(
+                withCornerRadius: self.radius,
+                divideRadiusByImageScale: self.divideRadiusByImageScale
+            )
         }
     }
 
@@ -276,8 +278,8 @@ public struct CircleFilter: ImageFilter {
 
     /// The filter closure used to create the modified representation of the given image.
     public var filter: (Image) -> Image {
-        { image in
-            image.af.imageRoundedIntoCircle()
+        return { image in
+            return image.af_imageRoundedIntoCircle()
         }
     }
 }
@@ -287,27 +289,30 @@ public struct CircleFilter: ImageFilter {
 #if os(iOS) || os(tvOS)
 
 /// The `CoreImageFilter` protocol defines `parameters`, `filterName` properties used by CoreImage.
+@available(iOS 9.0, *)
 public protocol CoreImageFilter: ImageFilter {
     /// The filter name of the CoreImage filter.
-    var filterName: String { get }
+	var filterName: String { get }
 
     /// The image filter parameters passed to CoreImage.
     var parameters: [String: Any] { get }
 }
 
-extension ImageFilter where Self: CoreImageFilter {
-    /// The filter closure used to create the modified representation of the given image.
-    public var filter: (Image) -> Image {
-        { image in
-            image.af.imageFiltered(withCoreImageFilter: self.filterName, parameters: self.parameters) ?? image
-        }
-    }
+@available(iOS 9.0, *)
+public extension ImageFilter where Self: CoreImageFilter {
+	/// The filter closure used to create the modified representation of the given image.
+	public var filter: (Image) -> Image {
+		return { image in
+            return image.af_imageFiltered(withCoreImageFilter: self.filterName, parameters: self.parameters) ?? image
+		}
+	}
 
-    /// The unique idenitifier for an `ImageFilter` conforming to the `CoreImageFilter` protocol.
-    public var identifier: String { "\(type(of: self))-parameters:(\(parameters))" }
+	/// The unique idenitifier for an `ImageFilter` conforming to the `CoreImageFilter` protocol.
+	public var identifier: String { return "\(type(of: self))-parameters:(\(self.parameters))" }
 }
 
 /// Blurs an image using a `CIGaussianBlur` filter with the specified blur radius.
+@available(iOS 9.0, *)
 public struct BlurFilter: ImageFilter, CoreImageFilter {
     /// The filter name.
     public let filterName = "CIGaussianBlur"
@@ -321,7 +326,7 @@ public struct BlurFilter: ImageFilter, CoreImageFilter {
     ///
     /// - returns: The new `BlurFilter` instance.
     public init(blurRadius: UInt = 10) {
-        parameters = ["inputRadius": blurRadius]
+        self.parameters = ["inputRadius": blurRadius]
     }
 }
 
@@ -343,8 +348,10 @@ public struct ScaledToSizeWithRoundedCornersFilter: CompositeImageFilter {
     ///
     /// - returns: The new `ScaledToSizeWithRoundedCornersFilter` instance.
     public init(size: CGSize, radius: CGFloat, divideRadiusByImageScale: Bool = false) {
-        filters = [ScaledToSizeFilter(size: size),
-                   RoundedCornersFilter(radius: radius, divideRadiusByImageScale: divideRadiusByImageScale)]
+        self.filters = [
+            ScaledToSizeFilter(size: size),
+            RoundedCornersFilter(radius: radius, divideRadiusByImageScale: divideRadiusByImageScale)
+        ]
     }
 
     /// The image filters to apply to the image in sequential order.
@@ -368,8 +375,10 @@ public struct AspectScaledToFillSizeWithRoundedCornersFilter: CompositeImageFilt
     ///
     /// - returns: The new `AspectScaledToFillSizeWithRoundedCornersFilter` instance.
     public init(size: CGSize, radius: CGFloat, divideRadiusByImageScale: Bool = false) {
-        filters = [AspectScaledToFillSizeFilter(size: size),
-                   RoundedCornersFilter(radius: radius, divideRadiusByImageScale: divideRadiusByImageScale)]
+        self.filters = [
+            AspectScaledToFillSizeFilter(size: size),
+            RoundedCornersFilter(radius: radius, divideRadiusByImageScale: divideRadiusByImageScale)
+        ]
     }
 
     /// The image filters to apply to the image in sequential order.
@@ -386,7 +395,7 @@ public struct ScaledToSizeCircleFilter: CompositeImageFilter {
     ///
     /// - returns: The new `ScaledToSizeCircleFilter` instance.
     public init(size: CGSize) {
-        filters = [ScaledToSizeFilter(size: size), CircleFilter()]
+        self.filters = [ScaledToSizeFilter(size: size), CircleFilter()]
     }
 
     /// The image filters to apply to the image in sequential order.
@@ -404,7 +413,7 @@ public struct AspectScaledToFillSizeCircleFilter: CompositeImageFilter {
     ///
     /// - returns: The new `AspectScaledToFillSizeCircleFilter` instance.
     public init(size: CGSize) {
-        filters = [AspectScaledToFillSizeFilter(size: size), CircleFilter()]
+        self.filters = [AspectScaledToFillSizeFilter(size: size), CircleFilter()]
     }
 
     /// The image filters to apply to the image in sequential order.

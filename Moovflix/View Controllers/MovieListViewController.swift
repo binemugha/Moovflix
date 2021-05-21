@@ -45,7 +45,7 @@ class MovieListViewController: UIViewController, UISearchBarDelegate {
         didSet {
             collectionView.reloadData()
             tableView.reloadData()
-            print("Fileterd movie list length \(filteredMoviesList.count)")
+            print("Filtered movie list length \(filteredMoviesList.count)")
         }
     }
     

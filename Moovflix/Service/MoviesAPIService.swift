@@ -13,6 +13,8 @@ class MoviesAPIService {
     
     typealias MoviesListAPIResult = (moviesList:[Movie] , nextPage: Int?, totalPages:Int)
     
+    
+    
     class func getMoviesList (moviesType : String, pageNumber: Int ,completion: @escaping (MoviesListAPIResult?) -> Void) {
         let moviesURL = getMoviesListURL(moviesType: moviesType , page: pageNumber)
         Alamofire.request(moviesURL).responseJSON { response in
@@ -33,6 +35,8 @@ class MoviesAPIService {
             }
         }
     }
+    
+    
     
     class func getMoreDetailedMovie (movieId : Int, completion: @escaping (Movie?) -> Void) {
         let moviesURL = getMovieDetailsUrl(movieId: movieId)
