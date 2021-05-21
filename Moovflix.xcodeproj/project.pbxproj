@@ -13,6 +13,7 @@
 		184D8A4626584D6B000DCB1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D8A4426584D6B000DCB1F /* Main.storyboard */; };
 		184D8A4826584D6D000DCB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184D8A4726584D6D000DCB1F /* Assets.xcassets */; };
 		184D8A4B26584D6D000DCB1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D8A4926584D6D000DCB1F /* LaunchScreen.storyboard */; };
+		B75FF31562CB2168A84087D6 /* Pods_Moovflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C6C456F7BE97343EDA718C /* Pods_Moovflix.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		184D8A4726584D6D000DCB1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		184D8A4A26584D6D000DCB1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		184D8A4C26584D6D000DCB1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3588245DB472DE3444E74830 /* Pods-Moovflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovflix.debug.xcconfig"; path = "Target Support Files/Pods-Moovflix/Pods-Moovflix.debug.xcconfig"; sourceTree = "<group>"; };
+		56C6C456F7BE97343EDA718C /* Pods_Moovflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moovflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6F70E6D4497047844F57056 /* Pods-Moovflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovflix.release.xcconfig"; path = "Target Support Files/Pods-Moovflix/Pods-Moovflix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B75FF31562CB2168A84087D6 /* Pods_Moovflix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				184D8A3D26584D6B000DCB1F /* Moovflix */,
 				184D8A3C26584D6B000DCB1F /* Products */,
+				F328332F59764654BEFF862B /* Pods */,
+				8FFDDF72135FD7DDEBF6F519 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = Moovflix;
 			sourceTree = "<group>";
 		};
+		8FFDDF72135FD7DDEBF6F519 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56C6C456F7BE97343EDA718C /* Pods_Moovflix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F328332F59764654BEFF862B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3588245DB472DE3444E74830 /* Pods-Moovflix.debug.xcconfig */,
+				F6F70E6D4497047844F57056 /* Pods-Moovflix.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 184D8A4F26584D6D000DCB1F /* Build configuration list for PBXNativeTarget "Moovflix" */;
 			buildPhases = (
+				9021D797B127F7B0B5B04270 /* [CP] Check Pods Manifest.lock */,
 				184D8A3726584D6B000DCB1F /* Sources */,
 				184D8A3826584D6B000DCB1F /* Frameworks */,
 				184D8A3926584D6B000DCB1F /* Resources */,
+				F783BF453DBB26656C1B8A89 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9021D797B127F7B0B5B04270 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moovflix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F783BF453DBB26656C1B8A89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moovflix/Pods-Moovflix-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moovflix/Pods-Moovflix-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Moovflix/Pods-Moovflix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		184D8A3726584D6B000DCB1F /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		184D8A5026584D6D000DCB1F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3588245DB472DE3444E74830 /* Pods-Moovflix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		184D8A5126584D6D000DCB1F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6F70E6D4497047844F57056 /* Pods-Moovflix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
