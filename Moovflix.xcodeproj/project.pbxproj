@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		184D8A3F26584D6B000DCB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A3E26584D6B000DCB1F /* AppDelegate.swift */; };
 		184D8A4126584D6B000DCB1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A4026584D6B000DCB1F /* SceneDelegate.swift */; };
-		184D8A4326584D6B000DCB1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A4226584D6B000DCB1F /* ViewController.swift */; };
 		184D8A4626584D6B000DCB1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D8A4426584D6B000DCB1F /* Main.storyboard */; };
 		184D8A4826584D6D000DCB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184D8A4726584D6D000DCB1F /* Assets.xcassets */; };
 		184D8A4B26584D6D000DCB1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D8A4926584D6D000DCB1F /* LaunchScreen.storyboard */; };
@@ -32,7 +31,6 @@
 		184D8A3B26584D6B000DCB1F /* Moovflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moovflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184D8A3E26584D6B000DCB1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		184D8A4026584D6B000DCB1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		184D8A4226584D6B000DCB1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		184D8A4526584D6B000DCB1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		184D8A4726584D6D000DCB1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		184D8A4A26584D6D000DCB1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 				184D8A8126585430000DCB1F /* Storyboards */,
 				184D8A3E26584D6B000DCB1F /* AppDelegate.swift */,
 				184D8A4026584D6B000DCB1F /* SceneDelegate.swift */,
-				184D8A4226584D6B000DCB1F /* ViewController.swift */,
 				184D8A4726584D6D000DCB1F /* Assets.xcassets */,
 				184D8A4C26584D6D000DCB1F /* Info.plist */,
 			);
@@ -301,7 +298,6 @@
 				184D8A7F265853A3000DCB1F /* InfiniteScrollActivityView.swift in Sources */,
 				184D8A612658509C000DCB1F /* Constants.swift in Sources */,
 				184D8A6B26585215000DCB1F /* MoviesTabBarContorller.swift in Sources */,
-				184D8A4326584D6B000DCB1F /* ViewController.swift in Sources */,
 				184D8A8F265854DA000DCB1F /* MovieListViewCell.swift in Sources */,
 				184D8A6F26585275000DCB1F /* MovieListViewController.swift in Sources */,
 				184D8A3F26584D6B000DCB1F /* AppDelegate.swift in Sources */,

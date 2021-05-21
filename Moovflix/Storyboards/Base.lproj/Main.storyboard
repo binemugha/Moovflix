@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="McN-pA-isu">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +10,7 @@
         <!--Movie Details View Controller-->
         <scene sceneID="6Dx-gF-ii7">
             <objects>
-                <viewController storyboardIdentifier="MovieDetailsViewController" id="Foo-qs-EOz" customClass="MovieDetailsViewController" customModule="Movies_Info" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetailsViewController" id="Foo-qs-EOz" customClass="MovieDetailsViewController" customModule="Moovflix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hvb-zQ-IOd" userLabel="Main View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,8 +49,8 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KY-4x-PIX">
-                                                        <rect key="frame" x="104" y="63" width="28.666666666666657" height="18"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KY-4x-PIX">
+                                                        <rect key="frame" x="106" y="63" width="28.666666666666657" height="18"/>
                                                         <color key="backgroundColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
@@ -107,7 +106,7 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJo-rs-CIo" customClass="RoundedButton" customModule="Movies_Info" customModuleProvider="target">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJo-rs-CIo" customClass="RoundedButton" customModule="Moovflix" customModuleProvider="target">
                                                 <rect key="frame" x="32" y="689.33333333333337" width="311" height="40"/>
                                                 <color key="backgroundColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -136,7 +135,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridViewCell" id="RHq-Zo-bu1" customClass="MovieGridViewCell" customModule="Movies_Info" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridViewCell" id="RHq-Zo-bu1" customClass="MovieGridViewCell" customModule="Moovflix" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="114"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -229,7 +228,7 @@
         <!--Movie List View Controller-->
         <scene sceneID="Xn7-hL-Jsi">
             <objects>
-                <viewController storyboardIdentifier="MovieListViewController" id="lLS-NN-n3X" customClass="MovieListViewController" customModule="Movies_Info" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieListViewController" id="lLS-NN-n3X" customClass="MovieListViewController" customModule="Moovflix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kqc-uP-gXn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -263,7 +262,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieListViewCell" rowHeight="130" id="Yym-HA-mbL" customClass="MovieListViewCell" customModule="Movies_Info" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieListViewCell" rowHeight="130" id="Yym-HA-mbL" customClass="MovieListViewCell" customModule="Moovflix" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="414" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yym-HA-mbL" id="7yj-Ke-z99">
@@ -351,7 +350,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridViewCell" id="S9S-Oh-f9k" customClass="MovieGridViewCell" customModule="Movies_Info" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridViewCell" id="S9S-Oh-f9k" customClass="MovieGridViewCell" customModule="Moovflix" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="146" height="247"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -431,7 +430,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="liM-Vy-mnx">
-                        <barButtonItem key="leftBarButtonItem" image="grid" id="dIz-s6-VBx">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" image="grid" id="dIz-s6-VBx">
                             <color key="tintColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="togleViewTypeClicked:" destination="lLS-NN-n3X" id="af7-1e-mKZ"/>
@@ -453,7 +452,7 @@
         <!--Movie-->
         <scene sceneID="RXp-FZ-EI5">
             <objects>
-                <tabBarController title="Movie" id="McN-pA-isu" customClass="MoviesTabBarContorller" customModule="Movies_Info" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController title="Movie" id="McN-pA-isu" customClass="MoviesTabBarContorller" customModule="Moovflix" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3ax-4e-S6X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -469,11 +468,11 @@
             </objects>
             <point key="canvasLocation" x="-877" y="-196"/>
         </scene>
-        <!--Testit-->
+        <!--TabText-->
         <scene sceneID="D54-cL-5od">
             <objects>
                 <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Apg-gl-xIv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Testit" id="A3w-Ua-XOO">
+                    <tabBarItem key="tabBarItem" title="TabText" id="A3w-Ua-XOO">
                         <color key="badgeColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -512,4 +511,3 @@
         </systemColor>
     </resources>
 </document>
-
