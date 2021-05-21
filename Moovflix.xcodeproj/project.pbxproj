@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,16 @@
 		184D8A4626584D6B000DCB1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D8A4426584D6B000DCB1F /* Main.storyboard */; };
 		184D8A4826584D6D000DCB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184D8A4726584D6D000DCB1F /* Assets.xcassets */; };
 		184D8A4B26584D6D000DCB1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D8A4926584D6D000DCB1F /* LaunchScreen.storyboard */; };
+		184D8A5C26585054000DCB1F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A5B26585054000DCB1F /* Movie.swift */; };
+		184D8A612658509C000DCB1F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A602658509C000DCB1F /* Constants.swift */; };
+		184D8A6626585130000DCB1F /* MoviesAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A6526585130000DCB1F /* MoviesAPIService.swift */; };
+		184D8A6B26585215000DCB1F /* MoviesTabBarContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A6A26585215000DCB1F /* MoviesTabBarContorller.swift */; };
+		184D8A6F26585275000DCB1F /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A6E26585275000DCB1F /* MovieListViewController.swift */; };
+		184D8A72265852D0000DCB1F /* MovieListViewController+TableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A71265852D0000DCB1F /* MovieListViewController+TableCollectionView.swift */; };
+		184D8A752658530A000DCB1F /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A742658530A000DCB1F /* MovieDetailsViewController.swift */; };
+		184D8A7926585362000DCB1F /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A7826585362000DCB1F /* ColumnFlowLayout.swift */; };
+		184D8A7C2658537F000DCB1F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A7B2658537F000DCB1F /* RoundedButton.swift */; };
+		184D8A7F265853A3000DCB1F /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A7E265853A3000DCB1F /* InfiniteScrollActivityView.swift */; };
 		B75FF31562CB2168A84087D6 /* Pods_Moovflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C6C456F7BE97343EDA718C /* Pods_Moovflix.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +35,16 @@
 		184D8A4726584D6D000DCB1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		184D8A4A26584D6D000DCB1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		184D8A4C26584D6D000DCB1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184D8A5B26585054000DCB1F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		184D8A602658509C000DCB1F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		184D8A6526585130000DCB1F /* MoviesAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAPIService.swift; sourceTree = "<group>"; };
+		184D8A6A26585215000DCB1F /* MoviesTabBarContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTabBarContorller.swift; sourceTree = "<group>"; };
+		184D8A6E26585275000DCB1F /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		184D8A71265852D0000DCB1F /* MovieListViewController+TableCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieListViewController+TableCollectionView.swift"; sourceTree = "<group>"; };
+		184D8A742658530A000DCB1F /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		184D8A7826585362000DCB1F /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
+		184D8A7B2658537F000DCB1F /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		184D8A7E265853A3000DCB1F /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
 		3588245DB472DE3444E74830 /* Pods-Moovflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovflix.debug.xcconfig"; path = "Target Support Files/Pods-Moovflix/Pods-Moovflix.debug.xcconfig"; sourceTree = "<group>"; };
 		56C6C456F7BE97343EDA718C /* Pods_Moovflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moovflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F70E6D4497047844F57056 /* Pods-Moovflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovflix.release.xcconfig"; path = "Target Support Files/Pods-Moovflix/Pods-Moovflix.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +83,11 @@
 		184D8A3D26584D6B000DCB1F /* Moovflix */ = {
 			isa = PBXGroup;
 			children = (
+				184D8A772658532A000DCB1F /* Customs */,
+				184D8A69265851AD000DCB1F /* View Controllers */,
+				184D8A6426585102000DCB1F /* Service */,
+				184D8A5F26585075000DCB1F /* Constants */,
+				184D8A5A2658503E000DCB1F /* Models */,
 				184D8A3E26584D6B000DCB1F /* AppDelegate.swift */,
 				184D8A4026584D6B000DCB1F /* SceneDelegate.swift */,
 				184D8A4226584D6B000DCB1F /* ViewController.swift */,
@@ -72,6 +97,51 @@
 				184D8A4C26584D6D000DCB1F /* Info.plist */,
 			);
 			path = Moovflix;
+			sourceTree = "<group>";
+		};
+		184D8A5A2658503E000DCB1F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				184D8A5B26585054000DCB1F /* Movie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		184D8A5F26585075000DCB1F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				184D8A602658509C000DCB1F /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		184D8A6426585102000DCB1F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				184D8A6526585130000DCB1F /* MoviesAPIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		184D8A69265851AD000DCB1F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				184D8A6A26585215000DCB1F /* MoviesTabBarContorller.swift */,
+				184D8A6E26585275000DCB1F /* MovieListViewController.swift */,
+				184D8A71265852D0000DCB1F /* MovieListViewController+TableCollectionView.swift */,
+				184D8A742658530A000DCB1F /* MovieDetailsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		184D8A772658532A000DCB1F /* Customs */ = {
+			isa = PBXGroup;
+			children = (
+				184D8A7826585362000DCB1F /* ColumnFlowLayout.swift */,
+				184D8A7B2658537F000DCB1F /* RoundedButton.swift */,
+				184D8A7E265853A3000DCB1F /* InfiniteScrollActivityView.swift */,
+			);
+			path = Customs;
 			sourceTree = "<group>";
 		};
 		8FFDDF72135FD7DDEBF6F519 /* Frameworks */ = {
@@ -88,7 +158,6 @@
 				3588245DB472DE3444E74830 /* Pods-Moovflix.debug.xcconfig */,
 				F6F70E6D4497047844F57056 /* Pods-Moovflix.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -206,9 +275,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184D8A752658530A000DCB1F /* MovieDetailsViewController.swift in Sources */,
+				184D8A7F265853A3000DCB1F /* InfiniteScrollActivityView.swift in Sources */,
+				184D8A612658509C000DCB1F /* Constants.swift in Sources */,
+				184D8A6B26585215000DCB1F /* MoviesTabBarContorller.swift in Sources */,
 				184D8A4326584D6B000DCB1F /* ViewController.swift in Sources */,
+				184D8A6F26585275000DCB1F /* MovieListViewController.swift in Sources */,
 				184D8A3F26584D6B000DCB1F /* AppDelegate.swift in Sources */,
+				184D8A6626585130000DCB1F /* MoviesAPIService.swift in Sources */,
+				184D8A7C2658537F000DCB1F /* RoundedButton.swift in Sources */,
+				184D8A7926585362000DCB1F /* ColumnFlowLayout.swift in Sources */,
+				184D8A5C26585054000DCB1F /* Movie.swift in Sources */,
 				184D8A4126584D6B000DCB1F /* SceneDelegate.swift in Sources */,
+				184D8A72265852D0000DCB1F /* MovieListViewController+TableCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
