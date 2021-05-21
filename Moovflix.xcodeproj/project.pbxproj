@@ -23,6 +23,8 @@
 		184D8A7926585362000DCB1F /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A7826585362000DCB1F /* ColumnFlowLayout.swift */; };
 		184D8A7C2658537F000DCB1F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A7B2658537F000DCB1F /* RoundedButton.swift */; };
 		184D8A7F265853A3000DCB1F /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A7E265853A3000DCB1F /* InfiniteScrollActivityView.swift */; };
+		184D8A8B265854B6000DCB1F /* MovieGridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A8A265854B6000DCB1F /* MovieGridViewCell.swift */; };
+		184D8A8F265854DA000DCB1F /* MovieListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D8A8E265854DA000DCB1F /* MovieListViewCell.swift */; };
 		B75FF31562CB2168A84087D6 /* Pods_Moovflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C6C456F7BE97343EDA718C /* Pods_Moovflix.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		184D8A7826585362000DCB1F /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
 		184D8A7B2658537F000DCB1F /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		184D8A7E265853A3000DCB1F /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
+		184D8A8A265854B6000DCB1F /* MovieGridViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewCell.swift; sourceTree = "<group>"; };
+		184D8A8E265854DA000DCB1F /* MovieListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewCell.swift; sourceTree = "<group>"; };
 		3588245DB472DE3444E74830 /* Pods-Moovflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovflix.debug.xcconfig"; path = "Target Support Files/Pods-Moovflix/Pods-Moovflix.debug.xcconfig"; sourceTree = "<group>"; };
 		56C6C456F7BE97343EDA718C /* Pods_Moovflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moovflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F70E6D4497047844F57056 /* Pods-Moovflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moovflix.release.xcconfig"; path = "Target Support Files/Pods-Moovflix/Pods-Moovflix.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,17 +87,17 @@
 		184D8A3D26584D6B000DCB1F /* Moovflix */ = {
 			isa = PBXGroup;
 			children = (
-				184D8A772658532A000DCB1F /* Customs */,
-				184D8A69265851AD000DCB1F /* View Controllers */,
 				184D8A6426585102000DCB1F /* Service */,
-				184D8A5F26585075000DCB1F /* Constants */,
+				184D8A772658532A000DCB1F /* Customs */,
 				184D8A5A2658503E000DCB1F /* Models */,
+				184D8A69265851AD000DCB1F /* View Controllers */,
+				184D8A8926585494000DCB1F /* Cells */,
+				184D8A5F26585075000DCB1F /* Constants */,
+				184D8A8126585430000DCB1F /* Storyboards */,
 				184D8A3E26584D6B000DCB1F /* AppDelegate.swift */,
 				184D8A4026584D6B000DCB1F /* SceneDelegate.swift */,
 				184D8A4226584D6B000DCB1F /* ViewController.swift */,
-				184D8A4426584D6B000DCB1F /* Main.storyboard */,
 				184D8A4726584D6D000DCB1F /* Assets.xcassets */,
-				184D8A4926584D6D000DCB1F /* LaunchScreen.storyboard */,
 				184D8A4C26584D6D000DCB1F /* Info.plist */,
 			);
 			path = Moovflix;
@@ -142,6 +146,24 @@
 				184D8A7E265853A3000DCB1F /* InfiniteScrollActivityView.swift */,
 			);
 			path = Customs;
+			sourceTree = "<group>";
+		};
+		184D8A8126585430000DCB1F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				184D8A4426584D6B000DCB1F /* Main.storyboard */,
+				184D8A4926584D6D000DCB1F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		184D8A8926585494000DCB1F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				184D8A8A265854B6000DCB1F /* MovieGridViewCell.swift */,
+				184D8A8E265854DA000DCB1F /* MovieListViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		8FFDDF72135FD7DDEBF6F519 /* Frameworks */ = {
@@ -280,8 +302,10 @@
 				184D8A612658509C000DCB1F /* Constants.swift in Sources */,
 				184D8A6B26585215000DCB1F /* MoviesTabBarContorller.swift in Sources */,
 				184D8A4326584D6B000DCB1F /* ViewController.swift in Sources */,
+				184D8A8F265854DA000DCB1F /* MovieListViewCell.swift in Sources */,
 				184D8A6F26585275000DCB1F /* MovieListViewController.swift in Sources */,
 				184D8A3F26584D6B000DCB1F /* AppDelegate.swift in Sources */,
+				184D8A8B265854B6000DCB1F /* MovieGridViewCell.swift in Sources */,
 				184D8A6626585130000DCB1F /* MoviesAPIService.swift in Sources */,
 				184D8A7C2658537F000DCB1F /* RoundedButton.swift in Sources */,
 				184D8A7926585362000DCB1F /* ColumnFlowLayout.swift in Sources */,
