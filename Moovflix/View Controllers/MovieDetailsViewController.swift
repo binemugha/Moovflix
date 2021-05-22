@@ -12,7 +12,7 @@ UICollectionViewDataSource , UICollectionViewDelegate {
   
     @IBOutlet weak var backdropImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var taglineLabel: UILabel!
+    @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var ratingsLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var genresLabel: UILabel!
@@ -59,7 +59,7 @@ UICollectionViewDataSource , UICollectionViewDelegate {
             posterImageView.af_setImage(withURL: url,imageTransition: .crossDissolve(0.2) )
         }
         titleLabel.text = movie.title
-        taglineLabel.text = movie.tagline
+        yearLabel.text = movie.relaseYear() 
         ratingsLabel.text = String(format: " %.2f ", movie.voteAverage!)
         durationLabel.text = movie.duration
         genresLabel.text = movie.genres

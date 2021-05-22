@@ -43,7 +43,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tag Line" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBe-Ue-lPx">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBe-Ue-lPx">
                                                         <rect key="frame" x="104" y="37" width="263" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -216,9 +216,9 @@
                         <outlet property="posterImageView" destination="peg-FT-WKR" id="Umb-3X-rNM"/>
                         <outlet property="ratingsLabel" destination="6KY-4x-PIX" id="2nu-Yy-uOd"/>
                         <outlet property="similarMoviesCollectionView" destination="EVq-Tx-HkL" id="7dT-1O-rOF"/>
-                        <outlet property="taglineLabel" destination="dBe-Ue-lPx" id="Nkb-5A-XCx"/>
                         <outlet property="titleLabel" destination="b1P-Wz-lEF" id="18g-wb-E93"/>
                         <outlet property="viewTrailerButton" destination="TJo-rs-CIo" id="fmv-hu-O4N"/>
+                        <outlet property="yearLabel" destination="dBe-Ue-lPx" id="Nkb-5A-XCx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xni-gG-33O" userLabel="First Responder" sceneMemberID="firstResponder"/>
