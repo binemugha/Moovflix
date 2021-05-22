@@ -24,7 +24,7 @@ class MovieListViewController: UIViewController, UISearchBarDelegate {
     var tableViewRefreshControl: UIRefreshControl!
     var collectionViewRefreshControl: UIRefreshControl!
     var isUserRefreshing = false
-    var moviesType = MoviesType.popular    //Defaults to popular movies
+    var moviesType = MoviesType.topRated    //Defaults to rated movies
     var moviesList: [Movie] = []
     var nextPageToLoad: Int? = 1
 

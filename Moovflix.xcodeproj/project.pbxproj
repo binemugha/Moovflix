@@ -85,12 +85,12 @@
 		184D8A3D26584D6B000DCB1F /* Moovflix */ = {
 			isa = PBXGroup;
 			children = (
-				184D8A6426585102000DCB1F /* Service */,
+				184D8A5F26585075000DCB1F /* Constants */,
 				184D8A772658532A000DCB1F /* Customs */,
+				184D8A6426585102000DCB1F /* Service */,
 				184D8A5A2658503E000DCB1F /* Models */,
 				184D8A69265851AD000DCB1F /* View Controllers */,
 				184D8A8926585494000DCB1F /* Cells */,
-				184D8A5F26585075000DCB1F /* Constants */,
 				184D8A8126585430000DCB1F /* Storyboards */,
 				184D8A3E26584D6B000DCB1F /* AppDelegate.swift */,
 				184D8A4026584D6B000DCB1F /* SceneDelegate.swift */,

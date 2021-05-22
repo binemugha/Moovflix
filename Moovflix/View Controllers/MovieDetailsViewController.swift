@@ -105,8 +105,9 @@ UICollectionViewDataSource , UICollectionViewDelegate {
                 self.viewTrailerButton.isEnabled = true
                 self.viewTrailerButton.isHidden = false
             }else{
+                print("Could not get the trailer key")
                 //Fail silently
-                //Could not get the trailer key
+                //
                 //Hide the View trailers button
                 
             }

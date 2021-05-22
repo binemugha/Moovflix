@@ -36,7 +36,7 @@ class MoviesTabBarContorller: UITabBarController {
         popularMoviesViewController.prepareTabItem()
         
         //set the root view controllers
-        viewControllers = [popularNavigationController , topRatedNavigationController , nowPlayingNavigationController , upcomingNavigationController]
+        viewControllers = [topRatedNavigationController, nowPlayingNavigationController, popularNavigationController,  upcomingNavigationController]
     }
 
     override func didReceiveMemoryWarning() {
