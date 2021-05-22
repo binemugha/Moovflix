@@ -15,8 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_removedbg" translatesAutoresizingMaskIntoConstraints="NO" id="BPO-VB-2Hv">
-                                <rect key="frame" x="117" y="358" width="180" height="180"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Movie-Icon-1-460x406" translatesAutoresizingMaskIntoConstraints="NO" id="BPO-VB-2Hv">
+                                <rect key="frame" x="80.5" y="304.5" width="253" height="287"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="253" id="eeO-QL-0mM"/>
+                                    <constraint firstAttribute="height" constant="287" id="rfK-DL-Aom"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -29,10 +33,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
-        <image name="image_removedbg" width="180" height="180"/>
+        <image name="Movie-Icon-1-460x406" width="460" height="406"/>
     </resources>
 </document>
