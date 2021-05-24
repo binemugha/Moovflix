@@ -20,6 +20,7 @@ An iOS app that gets movie information from the TMDB api
 ## Walkthrough
 
 ![Video Walkthrough](TopRatedSearch.gif)
+![Video Walkthrough](MovieDetails.gif)
 
 
 ## Helpers
