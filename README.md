@@ -19,6 +19,10 @@ Go to projects root and execute the following command in console to get the requ
 pod install 
 ```
 
+**Step 3:**
+
+Change the Swift language version in the pod project for Alamofire and Alamofire Image to Swift 4 and run the project
+
 ##  App features
 - User can view a list of movies. List of top rated movies. For extras, added list of popular, now playing and upcoming movies. Poster images load asynchronously.
 - User can view movie details by tapping on a movie in the list.
